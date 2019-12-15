@@ -17,17 +17,47 @@ const HomePresenter = ({ nowPlaying, upcoming, popular, loading, error }) =>
         <Container>
             {nowPlaying && nowPlaying.length > 0 && (
                 <Section title="Now Playing">
-                    {nowPlaying.map(movie => <Poster />)}
+                    {nowPlaying.map(movie => 
+                        <Poster
+                            key={movie.id}
+                            id={movie.id}
+                            imageUrl={movie.poster_path}
+                            title={movie.original_title}
+                            rating={movie.vote_average}
+                            year={movie.release_date.substring(0, 4)}
+                            isMovie={true}
+                        />
+                    )}
                 </Section>
             )}
             {upcoming && upcoming.length > 0 && (
                 <Section title="Upcoming Playing">
-                    {upcoming.map(movie => <Poster />)}
+                    {upcoming.map(movie => 
+                        <Poster
+                            key={movie.id}
+                            id={movie.id}
+                            imageUrl={movie.poster_path}
+                            title={movie.original_title}
+                            rating={movie.vote_average}
+                            year={movie.release_date.substring(0, 4)}
+                            isMovie={true}
+                        />
+                    )}
                 </Section>
             )}
             {popular && popular.length > 0 && (
                 <Section title="Popular Playing">
-                    {popular.map(movie => <Poster />)}
+                    {popular.map(movie => 
+                        <Poster
+                            key={movie.id}
+                            id={movie.id}
+                            imageUrl={movie.poster_path}
+                            title={movie.original_title}
+                            rating={movie.vote_average}
+                            year={movie.release_date.substring(0, 4)}
+                            isMovie={true}
+                        />
+                    )}
                 </Section>
             )}
             {error && <Message color="#e74c3c" text={error} />}
