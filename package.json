@@ -28,7 +28,7 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "homepage": "https://areuman.github.io/nomflix",
+  "homepage": "https://sad-kirch-3233f7.netlify.com",
   "browserslist": {
     "production": [
       ">0.2%",
